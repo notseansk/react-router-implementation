@@ -1,0 +1,210 @@
+@import "colors";
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background-color: $second;
+
+  > main {
+    position: relative;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    justify-content: center;
+    h1 {
+      font: 400 4rem $text1;
+      color: $first;
+      letter-spacing: 5px;
+    }
+    p {
+      font: 500 1rem $text1;
+      color: $first;
+      letter-spacing: 1px;
+    }
+  }
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: no-repeat center/cover url("../assets/s.png");
+    filter: blur(1px);
+    border-radius: 0 0 9vh 9vh;
+  }
+}
+.home2 {
+  width: 100%;
+  height: 100vh;
+  background-color: $second;
+  padding: 500px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 300px;
+  // margin-bottom: -250px;
+  > img {
+    width: 40%;
+    animation: imgUp 0.7s linear infinite alternate;
+  }
+  > .home2-text {
+    width: 50%;
+    display: flex;
+    gap: 3rem;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    height: 100vh;
+    > h1 {
+      font-family: cursive;
+      font-size: 3rem;
+    }
+    p {
+      color: $first;
+      letter-spacing: 2px;
+      word-spacing: 5px;
+      font: 100 1.2rem $text2;
+    }
+  }
+}
+
+@keyframes imgUp {
+  to {
+    transform: translateY(-10px);
+  }
+}
+.home3 {
+  width: 100%;
+  height: 100vh;
+  background-color: $second;
+  margin-top: -220px;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  > div {
+    width: 70%;
+    height: 80%;
+    background-color: $first;
+    border-radius: 0 150px 150px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    > h1 {
+      text-transform: uppercase;
+      border-bottom: 2px solid $dark;
+      padding: 0.5rem;
+      color: $dark;
+      cursor: pointer;
+      &:hover {
+        color: $third;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        bottom: -5px;
+        left: 0;
+        background-color: black;
+        border-radius: 200px;
+        // transform: scaleX(1);
+        transition: transform 0.2s ease-in-out;
+      }
+      &:hover::before {
+        transform: scaleX(1.3);
+        background-color: $third;
+      }
+    }
+    > p {
+      padding: 3rem;
+      letter-spacing: 1px;
+
+      word-spacing: 5px;
+      //   line-height: 170%;
+      font: italic 100 1.2rem $text2;
+    }
+  }
+}
+.home4 {
+  width: 100%;
+  height: 100vh;
+  background-color: $second;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  > div {
+    background-color: $third;
+
+    border-radius: 200px 0 0 200px;
+    height: 70vh;
+    width: 70%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > h1 {
+      text-align: center;
+      color: $first;
+      text-transform: uppercase;
+      width: 140px;
+      border-bottom: 2px solid $first;
+      border-radius: 0.9px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        height: 4px;
+        border-radius: 200px;
+        width: 100%;
+        left: 0;
+        bottom: -6px;
+        background-color: rgb(255, 255, 255);
+        transform: scaleX(1);
+        transition: transform 0.2s ease-in-out;
+      }
+      &:hover::before {
+        transform: scaleX(1.3);
+        background-color: rgb(207, 207, 207);
+      }
+    }
+    > article {
+      display: flex;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      > div {
+        animation: imgUp 0.7s linear infinite alternate;
+        margin: 1rem;
+        height: 9rem;
+        width: 9rem;
+        background-color: $first;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $dark;
+        cursor: pointer;
+        transition: all 0.5s;
+        &:hover {
+          filter: invert(1);
+        }
+        svg {
+          font-size: 4rem;
+        }
+        p {
+          font: 900 1.2rem $text2;
+        }
+      }
+    }
+  }
+}
