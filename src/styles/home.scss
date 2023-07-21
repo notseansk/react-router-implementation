@@ -98,9 +98,10 @@
     padding: 2rem;
     > h1 {
       text-transform: uppercase;
-      border-bottom: 2px solid $dark;
+      // border-bottom: 2px solid $dark;
       padding: 0.5rem;
       color: $dark;
+      position: relative;
       cursor: pointer;
       &:hover {
         color: $third;
@@ -155,7 +156,7 @@
       color: $first;
       text-transform: uppercase;
       width: 140px;
-      border-bottom: 2px solid $first;
+      // border-bottom: 2px solid $first;
       border-radius: 0.9px;
       position: relative;
       &::before {
